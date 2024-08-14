@@ -1,0 +1,219 @@
+GET http://localhost:3000/categories
+
+###
+POST http://localhost:3000/categories
+Content-Type: application/json
+
+{
+  "name": "Black Pink",
+  "description": "Ropa de Black Pink",
+  "image": "Imagencita de Black Pink"
+}
+
+###
+GET http://localhost:3000/payments
+
+###
+POST http://localhost:3000/payments
+Content-Type: application/json
+
+{
+  "paymentMethod": "Tarjeta",
+  "amount": 900,
+  "status": "No pago"
+}
+
+###
+GET http://localhost:3000/orders
+
+###
+POST http://localhost:3000/orders
+Content-Type: application/json
+
+{
+  "document": "74069957",
+  "address": "Angelica Gamarra",
+  "phone": "980002076",
+  "region": "Lima",
+  "province": "Lima",
+  "district": "Los Olivos",
+  "shippingMethod": "Envio a Domicilio",
+  "email": "jejeje@gmail.com",
+  "notes": "Que el chamo no se lo lleve",
+  "paymentId": 1,
+  "userId": "f43cbc42-c3f1-4925-92a0-8387710b666b"
+}
+###
+PUT http://localhost:3000/orders/935d6415-fa4d-4608-ab95-09fed4696348
+Content-Type: application/json
+
+{
+  "userId": "df074a39-eef4-4372-bdb6-5057980fd9df"
+}
+
+###
+GET http://localhost:3000/roles
+
+###
+POST http://localhost:3000/roles
+Content-Type: application/json
+
+{
+  "roleName": "customer"
+}
+
+###
+GET http://localhost:3000/users
+
+###
+POST http://localhost:3000/users
+Content-Type: application/json
+
+{
+  "email": "webiberto2@gmail.com",
+  "password": "123456",
+  "name": "Webiberto2",
+  "lastname": "Castro2"
+}
+
+###
+DELETE http://localhost:3000/users/
+
+###
+GET http://localhost:3000/reviews
+
+###
+POST http://localhost:3000/reviews
+Content-Type: application/json
+
+{
+  "rating": 5,
+  "comment": "Excelente producto, pero lo queme xd",
+  "productId": 1,
+  "userId": "c3b83590-7305-448e-902c-32cdbc7ba9b5"
+}
+
+###
+GET http://localhost:3000/products
+
+###
+POST http://localhost:3000/products
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjp7InJvbGVJZCI6Mywicm9sZU5hbWUiOiJjdXN0b21lciIsImNyZWF0ZUF0IjoiMjAyNC0wOC0wOVQyMDo0ODoyNS4xNDNaIiwidXBkYXRlQXQiOiIyMDI0LTA4LTA5VDIwOjQ4OjI1LjE0M1oifSwic3ViIjoiNTY1ZWRlNjktMDJjZC00ZTM4LWFkMTYtNmI0N2M3NDQ2NzM3IiwiaWF0IjoxNzIzMjYwODk5LCJleHAiOjE3MjQxMjQ4OTl9.lgBttabGbAj7Nrx68ZCFBt31tz0ovqbd3dE9Qv0XvMM
+
+{
+  "name": "Polera Seventeen",
+  "shortDescription": "Polera negra Seventeen - Dynamite",
+  "description": "Polera negra Seventeen - Dynamite",
+  "price": 325,
+  "stock": 35,
+  "images": ["PoleraSeventeen1.com", "PoleraSeventeen2.com","PoleraSeventeen3.com"],
+  "material": "Algodon",
+  "careInstructions": ["Lavado en seco", "No quemar papu"],
+  "brandId": 1,
+  "categoriesIds": [1]
+}
+
+###
+DELETE http://localhost:3000/products/1
+
+###
+GET http://localhost:3000/brands
+
+###
+POST http://localhost:3000/brands
+Content-Type: application/json
+
+{
+  "name": "Gamarrita Poshi",
+  "description": "Polera de Gamarrita"
+}
+
+###
+GET http://localhost:3000/product-variants
+
+###
+POST http://localhost:3000/product-variants
+Content-Type: application/json
+
+{
+  "color": "rosado",
+  "size": "S",
+  "stock": 5,
+  "productId": 1
+}
+
+###
+GET http://localhost:3000/carts
+
+###
+POST http://localhost:3000/order-product
+Content-Type: application/json
+
+{
+  "orderId": "23221eb8-31d0-4c56-922f-7fa8dd4439ba",
+  "productVariantId": 3,
+  "quantity": 3
+}
+
+###
+POST http://localhost:3000/product-variants
+Content-Type: application/json
+
+{
+  "color": "rosado",
+  "size": "M",
+  "stock": 5,
+  "productId": 2
+}
+
+###
+GET http://localhost:3000/carts
+
+###
+POST http://localhost:3000/carts
+Content-Type: application/json
+
+{
+  "userId": "df074a39-eef4-4372-bdb6-5057980fd9df"
+}
+
+###
+GET http://localhost:3000/cart-product
+
+###
+POST http://localhost:3000/cart-product
+Content-Type: application/json
+
+{
+  "cartId": 1,
+  "productVariantId": 8,
+  "quantity": 4
+}
+
+###
+GET http://localhost:3000/nuevo
+
+###
+POST http://localhost:3000/auth/login
+Content-Type: application/json
+
+{
+  "email" : "webiberto3@gmail.com",
+  "password" : "123456"
+}
+###
+POST http://localhost:3000/auth/register
+Content-Type: application/json
+
+{
+  "email": "webiberto3@gmail.com",
+  "password": "123456",
+  "name": "Webiberto3",
+  "lastname": "Castro3"
+}
+
+
+###
+GET http://localhost:3000/auth/profile
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjp7InJvbGVJZCI6Mywicm9sZU5hbWUiOiJjdXN0b21lciIsImNyZWF0ZUF0IjoiMjAyNC0wOC0wOVQyMDo0ODoyNS4xNDNaIiwidXBkYXRlQXQiOiIyMDI0LTA4LTA5VDIwOjQ4OjI1LjE0M1oifSwiZW1haWwiOiJ3ZWJpYmVydG8zQGdtYWlsLmNvbSIsInN1YiI6IjdjOTIzZTUzLTkyNmItNDIwYS05ZTIwLTNlMjhkM2ZiMGVhNyIsImlhdCI6MTcyMzUxMzg4MSwiZXhwIjoxNzIzNTEzOTExfQ.jhxMwtbBV3Mzl-JLJAKt6Jj9HifUqZylnfJUc2MZkSc
