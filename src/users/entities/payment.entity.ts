@@ -13,7 +13,6 @@ import { Order } from './order.entity';
 @Entity({ name: 'payments' })
 export class Payment {
   @PrimaryGeneratedColumn({ name: 'payment_id' })
-  @Exclude()
   paymentId: number;
 
   @Column({ name: 'payment_method', type: 'varchar', length: 50 })

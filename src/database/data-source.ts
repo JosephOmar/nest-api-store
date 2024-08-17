@@ -2,7 +2,7 @@ import { DataSource } from 'typeorm';
 
 export const AppDataSource = new DataSource({
   type: 'postgres',
-  url: process.env.DATABASE_RENDER,
+  url: 'postgresql://nest_postgres_store_user:1fYBIr9d1xDjyEyrpmPXMP30NmuD3r2Z@dpg-cquh9c5svqrc73etein0-a.oregon-postgres.render.com/nest_postgres_store',
   synchronize: false,
   logging: false,
   entities: ['src/**/*.entity.ts'],

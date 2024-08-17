@@ -18,7 +18,6 @@ import { OrderProduct } from './order_product.entity';
 @Entity({ name: 'orders' })
 export class Order {
   @PrimaryGeneratedColumn('uuid')
-  @Exclude()
   id: string;
 
   // @Column({ name: 'client_id', type: 'uuid' })

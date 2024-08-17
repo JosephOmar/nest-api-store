@@ -19,7 +19,6 @@ import { Review } from '../../products/entities/review.entity';
 @Entity({ name: 'users' })
 export class User {
   @PrimaryGeneratedColumn('uuid')
-  @Exclude()
   id: string;
 
   @Column({ name: 'email', type: 'varchar', length: 60, unique: true })

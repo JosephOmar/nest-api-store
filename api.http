@@ -1,3 +1,26 @@
+###
+GET https://nest-api-store.onrender.com/roles
+###
+POST https://nest-api-store.onrender.com/roles
+Content-Type: application/json
+
+{
+  "roleName": "admin"
+}
+###
+POST https://nest-api-store.onrender.com/users
+Content-Type: application/json
+
+{
+  "email": "joseph.meza.dev@gmail.com",
+  "password": "admin",
+  "name": "Joseph Omar",
+  "lastname": "Meza Torres",
+  "roleId": 2
+}
+###
+DELETE https://nest-api-store.onrender.com/users/
+###
 GET http://localhost:3000/categories
 
 ###

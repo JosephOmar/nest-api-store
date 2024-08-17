@@ -14,7 +14,6 @@ import { User } from '../../users/entities/user.entity';
 @Entity({ name: 'reviews' })
 export class Review {
   @PrimaryGeneratedColumn({ name: 'review_id' })
-  @Exclude()
   reviewId: number;
 
   @Column({ name: 'rating', type: 'int' })

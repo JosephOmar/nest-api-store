@@ -13,7 +13,6 @@ import { User } from './user.entity';
 @Entity({ name: 'roles' })
 export class Role {
   @PrimaryGeneratedColumn({ name: 'role_id' })
-  @Exclude()
   roleId: number;
 
   @Column({ name: 'role_name', type: 'varchar', length: 20 })

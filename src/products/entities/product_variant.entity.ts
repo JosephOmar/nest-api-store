@@ -14,7 +14,6 @@ import { Product } from './product.entity';
 @Entity({ name: 'product_variants' })
 export class ProductVariant {
   @PrimaryGeneratedColumn({ name: 'variant_id' })
-  @Exclude()
   variantId: number;
 
   // @Column({ name: 'product_id', type: 'int' })

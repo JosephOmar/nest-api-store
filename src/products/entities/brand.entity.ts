@@ -13,7 +13,6 @@ import { Product } from './product.entity';
 @Entity({ name: 'brands' })
 export class Brand {
   @PrimaryGeneratedColumn({ name: 'brand_id' })
-  @Exclude()
   brandId: number;
 
   @Column({ name: 'name', type: 'varchar', length: 100 })

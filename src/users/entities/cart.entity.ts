@@ -14,7 +14,6 @@ import { CartProduct } from './cart_product.entity';
 @Entity({ name: 'carts' })
 export class Cart {
   @PrimaryGeneratedColumn({ name: 'cart_id' })
-  @Exclude()
   cartId: number;
 
   @Exclude()
