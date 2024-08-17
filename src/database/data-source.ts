@@ -8,4 +8,13 @@ export const AppDataSource = new DataSource({
   entities: ['src/**/*.entity.ts'],
   migrations: ['src/database/migrations/*.ts'],
   migrationsTableName: 'migrations',
+  ssl: process.env.POSTGRES_SSL === 'true',
+  extra: {
+    ssl:
+      process.env.POSTGRES_SSL === 'true'
+        ? {
+            rejectUnauthorized: false,
+          }
+        : null,
+  },
 });
